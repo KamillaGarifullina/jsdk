@@ -26,6 +26,7 @@
 * etc.
 
 ### Supported browsers
+  
 JSDK is supported and tested in all major modern desktop and mobile browsers:
 * Chrome
 * Firefox
@@ -33,7 +34,7 @@ JSDK is supported and tested in all major modern desktop and mobile browsers:
 * Edge
 * Opera
 * etc.
- 
+
 [Internet Explorer](https://uploadcare.com/blog/uploadcare-stops-internet-explorer-support/) is outdated and not supported anymore.
 
 ## ⚙️ Installation and start

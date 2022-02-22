@@ -20,7 +20,7 @@ Uploader builds list:
 * Built with love ❤️
 
 ### Supported browsers
-Uploader is supported in all major modern [browsers](https://github.com/uploadcare/jsdk//README.md#supported-browsers).
+Uploader is supported in all major modern [browsers](https://github.com/uploadcare/jsdk#supported-browsers).
 
 [Internet Explorer](https://uploadcare.com/blog/uploadcare-stops-internet-explorer-support/) is outdated and not supported anymore.
 
