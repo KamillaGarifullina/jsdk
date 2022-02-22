@@ -1,6 +1,6 @@
 # uc-uploader
 
-Here you can find the set of ready-made uploaders for the most frequent file uploading cases. 
+Here you can find the set of ready-made uploaders for the most frequent file uploading cases.
 Each uploader is highly customizable on its own and could be used as the custom build reference, but you can use it "as is".
 
 Uploader builds list:
@@ -20,18 +20,17 @@ Uploader builds list:
 * Built with love ❤️
 
 ### Supported browsers
-Uploader is supported in all major modern 
-[browsers](https://github.com/uploadcare/jsdk/blob/main/uploader/README.md#-supported-browsers).
+Uploader is supported in all major modern [browsers](https://github.com/uploadcare/jsdk#supported-browsers).
 
 [Internet Explorer](https://uploadcare.com/blog/uploadcare-stops-internet-explorer-support/) is outdated and not supported anymore.
 
 ## ⚙️ Integration
-### CDN version 
+### CDN version
 Connect script:
 ```html
 <script
-  src="https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.min.js"
-  type="module">
+ src="https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.min.js"
+ type="module">
 </script>
 ```
 
@@ -54,32 +53,32 @@ After connection, use the `<uc-uploader>` tag in your application markup:
 Note that all configurations, localization texts, icons, and styling are placed into CSS file, so you should connect the default one (or create your own):
 ```html
 <style>
-  @import url(https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.css);
-  .my-settings {
-    --ctx-name: 'my-uploader';
-    --cfg-pubkey: 'demopublickey';
-  }
+ @import url(https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.css);
+ .my-settings {
+   --ctx-name: 'my-uploader';
+   --cfg-pubkey: 'demopublickey';
+ }
 </style>
 
-<uc-uploader 
-  class="my-settings uc-wgt-common">
+<uc-uploader
+ class="my-settings uc-wgt-common">
 </uc-uploader>
 ```
 
 * `uc-wgt-common` - is a pre-defined common CSS class containing all basic uploader parameters.
 
 ### Shadow DOM
-If you need additional isolation and styling security levels, you can get it with Shadow DOM. 
+If you need additional isolation and styling security levels, you can get it with Shadow DOM.
 To enable it and encapsulate all styles into separated scope, use the `css-src` attribute:
 ```html
-<uc-uploader 
-  css-src="https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.css">
+<uc-uploader
+ css-src="https://unpkg.com/@uploadcare/uploader@latest/build/regular/uc-uploader.css">
 </uc-uploader>
 ```
 
 ### Custom tags naming convention
-By design, all custom elements should have a dash symbol (`-`) in their names. 
-All custom tags used in uploader are prefixed with the `uc-` part. 
+By design, all custom elements should have a dash symbol (`-`) in their names.
+All custom tags used in uploader are prefixed with the `uc-` part.
 
 Examples:
 ```html
@@ -116,12 +115,12 @@ You should obtain a Public API Key in your [Uploadcare project's dashboard](http
 For demo-only purposes, you can use `demopublickey` instead.
 
 ### Context name
-Our concept of workflow contexts is very similar to native HTML `name` attributes for the "radio" inputs. 
-When you use the same names, elements act in one common context. 
-In the case of "radio" inputs, all elements in the same context will know the state of the others (and you can make only one possible selection). 
+Our concept of workflow contexts is very similar to native HTML `name` attributes for the "radio" inputs.
+When you use the same names, elements act in one common context.
+In the case of "radio" inputs, all elements in the same context will know the state of the others (and you can make only one possible selection).
 
-In the case of uploader, you can also set the context with a `ctx-name` attribute or `--ctx-name` custom CSS property. 
-That helps to create the link between each uploader instance and its internal or external entities. 
+In the case of uploader, you can also set the context with a `ctx-name` attribute or `--ctx-name` custom CSS property.
+That helps to create the link between each uploader instance and its internal or external entities.
 By default, context will be created automatically, but if you need to bind uploader to some other workflow, you can use the following approach:
 ```html
 ...
@@ -137,11 +136,11 @@ For more information, please visit ["context" section](https://symbiotejs.org/?c
 All configurations could be provided via the set of [CSS-variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties):
 ```css
 .my-settings {
-  --cfg-pubkey: 'demopublickey';
-  --cfg-multiple: 1;
-  --cfg-img-only: 0;
-  --cfg-source-list: 'local, url, camera, dropbox, gdrive, facebook';
-  ...
+ --cfg-pubkey: 'demopublickey';
+ --cfg-multiple: 1;
+ --cfg-img-only: 0;
+ --cfg-source-list: 'local, url, camera, dropbox, gdrive, facebook';
+ ...
 }
 ```
 
@@ -152,9 +151,9 @@ Any configuration value can be defined and redefined at any DOM tree-level regar
 More details about configuration parameters you can find [here](../upload-blocks/docs/configuration/).
 
 ## 🎀 Styling
-For the look & feel customization, you can use the "Elements" section in your browser developer tools panel. 
-It's easy to find any uploader inner components and their contents because they have custom tag names. 
-You don't need any specific tools, unlike with such libraries as React. 
+For the look & feel customization, you can use the "Elements" section in your browser developer tools panel.
+It's easy to find any uploader inner components and their contents because they have custom tag names.
+You don't need any specific tools, unlike with such libraries as React.
 Those tag names could be used as convenient CSS selectors.
 
 There are three major levels of possible styling customizations:
@@ -165,24 +164,24 @@ There are three major levels of possible styling customizations:
 For more details, please follow this [guide](../upload-blocks/themes/uc-basic/).
 
 ## 🟢 CSP settings
-If the application works with sensitive user data, such as personal photos, it is recommended to increase its security with [CSP settings](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP). Uploader is using `Blob` URL's for on-the-flight generated images and the stylesheets in some cases, so don't forget to add `blob:` source into the CSP settings:
+If the application works with sensitive user data, such as personal photos, it is recommended to increase its security with [CSP settings](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP). Uploader is using `Blob` URLs for on-the-flight generated images and the stylesheets in some cases, so don't forget to add `blob:` source into the CSP settings:
 
 ```html
-<meta 
-  http-equiv="Content-Security-Policy" 
-  content="style-src 'self' blob:; script-src 'self'; img-src 'self' https://ucarecdn.com blob:;">
+<meta
+ http-equiv="Content-Security-Policy"
+ content="style-src 'self' blob:; script-src 'self'; img-src 'self' https://ucarecdn.com blob:;">
 ```
 
 ## 📤 Data output
-We provide the dedicated block for the data output purposes - `<uc-data-output>`. 
+We provide the dedicated block for the data output purposes - `<uc-data-output>`.
 This Custom Element can be connected to some workflow context and provide you with convenient data access.
 
 Here is the code example:
 ```html
 <uc-data-output
-  console
-  fire-events
-  item-template="<img src='https://ucarecdn.com/{{uuid}}/-/preview/' />">
+ console
+ fire-events
+ item-template="<img src='https://ucarecdn.com/{{uuid}}/-/preview/' />">
 </uc-data-output>
 ```
 
